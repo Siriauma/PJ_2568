@@ -13,10 +13,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-        body { font-family: 'Kanit', sans-serif; background-color: #f7fafc; }
+        body { 
+            font-family: 'Kanit', sans-serif; 
+            background-color: #f7fafc; 
+            background-image: url('background06.png'); /* ปรับชื่อไฟล์/นามสกุลตามจริง */
+            background-size: cover; /* ทำให้ภาพคลุมพื้นที่ทั้งหมดของหน้าจอ */
+            background-position: center; /* ให้ภาพอยู่กึ่งกลาง */
+            background-attachment: fixed; /* ภาพจะนิ่งเมื่อ Scroll */  
+        }
         .pb-safe { padding-bottom: env(safe-area-inset-bottom, 1rem); }
 
-        /* Animations */
         @keyframes countUp { 
             from { opacity: 0; transform: translateY(10px); } 
             to { opacity: 1; transform: translateY(0); } 
@@ -194,7 +200,6 @@
 </footer>
 
 </div>
-
 
 <script>
 const API_BASE = 'http://127.0.0.1:3000';
@@ -379,3 +384,4 @@ function setupAutoLogout() {
 
 </body>
 </html>
+
